@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>star</title>
+    <script>
+      // window.onload 이벤트를 사용하여 페이지 로딩이 완료된 후 코드가 실행되도록 합니다.
+      window.onload = function () {
+        let star = 5; // 별의 개수를 설정합니다.
+
+        // 7번 별 찍기 (왼쪽으로 기울어진 역삼각형)
+        document.write("<br><br>" + "7번 별 찍기 <br><br>");
+        for (let i = 0; i < star; i++) {
+          for (let j = 0; j < i; j++) {
+            document.write("&nbsp;"); // 왼쪽 공백 출력
+          }
+          for (let k = 5; k > i; k--) {
+            document.write("*"); // 별 출력
+          }
+          document.write("<br>"); // 줄 바꿈
+        }
+
+        // 8번 별 찍기 (정삼각형)
+        document.write("<br><br>" + "8번 별 찍기 <br><br>");
+        for (let i = 0; i < star; i++) {
+          for (let j = star - 1; j > i; j--) {
+            document.write("&nbsp;"); // 왼쪽 공백 출력
+          }
+          for (let k = 0; k < i * 2 + 1; k++) {
+            document.write("*"); // 별 출력
+          }
+          document.write("<br>"); // 줄 바꿈
+        }
+
+        // 9번 별 찍기 (역삼각형)
+        document.write("<br><br>" + "9번 별 찍기 <br><br>");
+        for (let i = 0; i < star; i++) {
+          for (let j = 0; j < i; j++) {
+            document.write("&nbsp;"); // 왼쪽 공백 출력
+          }
+          for (let k = 0; k < 2 * (star - i)-1; k++) {
+            document.write("*"); // 별 출력
+          }
+          document.write("<br>"); // 줄 바꿈
+        }
+
+        // 10번 별 찍기 (마름모 모양)
+        document.write("<br><br>" + "10번 별 찍기 <br><br>");
+        
+        // 마름모의 윗부분
+        for (let i = 0; i < star; i++) {
+          for (let j = star - 1; j > i; j--) {
+            document.write("&nbsp;"); // 왼쪽 공백 출력
+          }
+          for (let k = 0; k < i * 2 + 1; k++) {
+            document.write("*"); // 별 출력
+          }
+          document.write("<br>"); // 줄 바꿈
+        }
+        
+        // 마름모의 아랫부분
+        for (let i = 0; i < star; i++) {
+          for (let j = 0; j < i; j++) {
+            document.write("&nbsp;"); // 왼쪽 공백 출력
+          }
+          for (let k = 0; k < 2 * (star - i)-1; k++) {
+            document.write("*"); // 별 출력
+          }
+          document.write("<br>"); // 줄 바꿈
+        }
+      };
+    </script>
+</head>
+<body></body>
+</html>
